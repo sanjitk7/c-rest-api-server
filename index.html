@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Options Form</h2>
+
+    <form id="optionsForm">
+        <label>
+            <input type="checkbox" name="option1"> Option 1
+        </label>
+        <label>
+            <input type="checkbox" name="option2"> Option 2
+        </label>
+        <label>
+            <input type="checkbox" name="option3"> Option 3
+        </label>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            const form = document.getElementById('optionsForm');
+            const formData = new FormData(form);
+
+            // Customize the URL as needed
+            const apiUrl = 'http://localhost:8080/handleOptions';
+
+            // Make a POST request using the Fetch API
+            fetch(apiUrl, {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Response:', data);
+                // Handle the response as needed
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Handle errors
+            });
+        }
+    </script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Options Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Options Form</h2>
+
+    <form id="optionsForm">
+        <label>
+            <input type="checkbox" name="option1"> Option 1
+        </label>
+        <label>
+            <input type="checkbox" name="option2"> Option 2
+        </label>
+        <label>
+            <input type="checkbox" name="option3"> Option 3
+        </label>
+
+        <button type="button" onclick="submitForm()">Submit</button>
+    </form>
+
+    <script>
+        function submitForm() {
+            const form = document.getElementById('optionsForm');
+            const formData = new FormData(form);
+
+            // Customize the URL as needed
+            const apiUrl = 'http://localhost:8080/handleOptions';
+
+            // Make a POST request using the Fetch API
+            fetch(apiUrl, {
+                method: 'POST',
+                body: formData,
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Response:', data);
+                // Handle the response as needed
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                // Handle errors
+            });
+        }
+    </script>
+
+</body>
+</html>
